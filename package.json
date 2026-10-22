@@ -5,11 +5,14 @@
   "version": "0.2.0",
   "publisher": "local-tools",
   "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/Pruthvi2911/Antigravity_autoclick.git" },
+  "homepage": "https://github.com/Pruthvi2911/Antigravity_autoclick#readme",
+  "bugs": { "url": "https://github.com/Pruthvi2911/Antigravity_autoclick/issues" },
   "engines": { "vscode": "^1.85.0" },
   "extensionKind": ["ui"],
   "categories": ["Other"],
   "activationEvents": ["onStartupFinished"],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "capabilities": {
     "untrustedWorkspaces": { "supported": false, "description": "Automatic command approvals require a trusted workspace." },
     "virtualWorkspaces": { "supported": false }

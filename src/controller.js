@@ -41,7 +41,7 @@ function createController(vscode, context, runtime = {}) {
     const executable = path.win32.join(process.env.SystemRoot || 'C:\\Windows', 'System32', 'WindowsPowerShell', 'v1.0', 'powershell.exe');
     let proc;
     try {
-      proc = launch(executable, ['-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', path.join(context.extensionPath, 'watcher.ps1'), '-ParentProcessId', String(process.pid)], { windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+      proc = launch(executable, ['-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', path.join(context.extensionPath, 'src', 'watcher.ps1'), '-ParentProcessId', String(process.pid)], { windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
     } catch (error) {
       enabled = false; void context.globalState.update('enabled', false); log(`Cannot launch helper: ${error.message}`); render(); return;
     }

@@ -29,7 +29,7 @@ function Add-Text($name, $text) {
 try {
     Add-Text 'extension.vsixmanifest' $vsix
     Add-Text '[Content_Types].xml' $types
-    foreach ($file in @('package.json', 'extension.js', 'controller.js', 'watcher.ps1', 'rules.ps1', 'README.md', 'LICENSE', 'CHANGELOG.md')) {
+    foreach ($file in @('package.json', 'src/extension.js', 'src/controller.js', 'src/watcher.ps1', 'src/rules.ps1', 'README.md', 'LICENSE', 'docs/CHANGELOG.md')) {
         [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($archive, (Join-Path $root $file), "extension/$file") | Out-Null
     }
 } finally { $archive.Dispose(); $stream.Dispose() }

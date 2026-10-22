@@ -1,6 +1,7 @@
 node_modules/
 dist/
 *.vsix
+!Antigravity-AutoClick/*.vsix
 *.log
 .env
 .env.*

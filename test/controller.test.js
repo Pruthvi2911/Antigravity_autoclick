@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const { EventEmitter } = require('node:events');
 const { execFileSync } = require('node:child_process');
 const path = require('node:path');
-const { createController } = require('../controller');
+const { createController } = require('../src/controller');
 function setup({ enabled = false, trusted = true, platform = 'win32' } = {}) {
   const commands = new Map(), children = [], errors = [], logs = [];
   const item = { show() {}, dispose() {} };
