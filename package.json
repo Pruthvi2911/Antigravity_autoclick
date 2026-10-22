@@ -1,0 +1,24 @@
+{
+  "name": "antigravity-option2",
+  "displayName": "Antigravity Option 2",
+  "description": "One toggle for conversation-scoped command approvals in Antigravity IDE on Windows.",
+  "version": "0.2.0",
+  "publisher": "local-tools",
+  "license": "MIT",
+  "engines": { "vscode": "^1.85.0" },
+  "extensionKind": ["ui"],
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": { "supported": false, "description": "Automatic command approvals require a trusted workspace." },
+    "virtualWorkspaces": { "supported": false }
+  },
+  "scripts": { "test": "node --test", "package": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/package.ps1" },
+  "contributes": {
+    "commands": [
+      { "command": "option2.toggle", "title": "Option 2: Toggle Automatic Conversation Approval" },
+      { "command": "option2.logs", "title": "Option 2: Show Diagnostics" }
+    ]
+  }
+}
